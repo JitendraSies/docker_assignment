@@ -9,12 +9,12 @@ pipeline {
         }
         stage('Build Node App') {
             steps {
-                bat 'docker build -t node-app -f Dockerfile.node .'
+                bat 'docker build -t node-app -f dockernode .'
             }
         }
         stage('Build HTML App') {
             steps {
-                bat 'docker build -t html-app -f Dockerfile.html .'
+                bat 'docker build -t html-app -f dockerhtml .'
             }
         }
         stage('Run Containers') {
